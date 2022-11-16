@@ -12,14 +12,15 @@ import {
 import { AuthContext } from './context/AuthContext'
 import Test from './pages/Test'
 
-const App = () => {
+const App =  ()=> {
 
-  //const {currentUser} = useContext(AuthContext)
-  const currentUser = true
+  const { currentUser } = useContext(AuthContext)
+  
   const ProtectedRoute = ({children}) =>{
     if(!currentUser){
-      return <Navigate to="/login"/>
+      return <Navigate to="/login" />
     }
+    return children
   }
 
   return(
@@ -41,3 +42,5 @@ const App = () => {
 }
 
 export default App
+
+
