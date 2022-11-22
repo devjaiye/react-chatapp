@@ -5,10 +5,10 @@ import { ChatContext } from "../context/ChatContext";
 import { db } from "../firebase";
 
 const Chats = () => {
-  const [chats, setChats] = useState([]);
+  const [chats, setChats] = useState([])
 
-  const { currentUser } = useContext(AuthContext);
-  const { dispatch } = useContext(ChatContext);
+  const { currentUser } = useContext(AuthContext)
+  const { dispatch } = useContext(ChatContext)
 
   useEffect(() => {
     const getChats = () => {
@@ -21,8 +21,8 @@ const Chats = () => {
       };
     };
 
-    currentUser.uid && getChats();
-  }, [currentUser.uid]);
+    currentUser.uid && getChats()
+  }, [currentUser.uid])
 
   const handleSelect = (u) => {
     dispatch({ type: "CHANGE_USER", payload: u });
@@ -44,7 +44,7 @@ const Chats = () => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Chats;
+export default Chats
