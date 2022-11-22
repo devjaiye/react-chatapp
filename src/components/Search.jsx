@@ -30,7 +30,7 @@ const Search = () => {
     e.code === "Enter" && handleSearch();
   };
 
-  const handleSelect = async () => {
+  const handleSelect = async (u) => {
     //check whether the group(chats in firestore) exists, if not create
     const combinedId =
       currentUser.uid > user.uid
