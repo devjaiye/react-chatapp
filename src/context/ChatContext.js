@@ -36,5 +36,5 @@ export const ChatContextProvider = ({ children }) => {
     <ChatContext.Provider value={{ data:state, dispatch }}>
       {children}
     </ChatContext.Provider>
-  )
-}
+  );
+};
